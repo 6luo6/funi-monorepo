@@ -1,0 +1,31 @@
+{
+  "name": "funi-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:docs": "f2elint scan && pnpm -C docs dev",
+    "dev:examples": "pnpm -C examples dev",
+    "f2elint-scan": "f2elint scan",
+    "f2elint-fix": "f2elint fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "funi-ui": "workspace:^",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "sass": "^1.69.3",
+    "vite": "^4.4.5",
+    "vitepress": "1.0.0-rc.21"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "f2elint commit-file-scan",
+      "commit-msg": "f2elint commit-msg-scan"
+    }
+  }
+}
