@@ -11,6 +11,9 @@ importers:
       funi-ui:
         specifier: workspace:^
         version: link:packages
+      husky:
+        specifier: ^8.0.3
+        version: 8.0.3
       vue:
         specifier: ^3.3.4
         version: 3.3.4
@@ -768,6 +771,12 @@ packages:
     resolution: {integrity: sha512-Ji/LYq7xP7cdBdG15CJ4YZZNA/c6Kf64rXj+Jp2bKsC2JTgcBmz+GGkHwpk6aoMHXRP2XraxGcGjXhITr7ooYg==}
     dependencies:
       object-assign: 4.1.1
+    dev: false
+
+  /husky@8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: false
 
   /immutable@4.3.4:
