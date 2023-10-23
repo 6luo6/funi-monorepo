@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:docs": "f2elint scan && pnpm -C docs dev",
+    "plop": "pnpm -C packages plop",
+    "dev:docs": "pnpm -C docs dev",
     "dev:examples": "pnpm -C examples dev"
   },
   "keywords": [],
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
+    "plop": "^4.0.0",
     "sass": "^1.69.3",
     "vite": "^4.4.5",
     "vitepress": "1.0.0-rc.21"

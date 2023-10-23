@@ -1,15 +1,27 @@
-import FuniButton from './button';
+import "element-plus/dist/index.css";
+import { defineAsyncComponent } from 'vue';
+import { ElAffix as FuniAffix,ElAlert as FuniAlert,ElAutocomplete as FuniAutocomplete,ElAutoResizer as FuniAutoResizer,ElAvatar as FuniAvatar,ElBacktop as FuniBacktop,ElBadge as FuniBadge,ElBreadcrumb as FuniBreadcrumb,ElBreadcrumbItem as FuniBreadcrumbItem,ElButton as FuniButton,ElButtonGroup as FuniButtonGroup,ElCalendar as FuniCalendar,ElCard as FuniCard,ElCarousel as FuniCarousel,ElCarouselItem as FuniCarouselItem,ElCascader as FuniCascader,ElCascaderPanel as FuniCascaderPanel,ElCheckTag as FuniCheckTag,ElCheckbox as FuniCheckbox,ElCheckboxButton as FuniCheckboxButton,ElCheckboxGroup as FuniCheckboxGroup,ElCol as FuniCol,ElCollapse as FuniCollapse,ElCollapseItem as FuniCollapseItem,ElCollapseTransition as FuniCollapseTransition,ElColorPicker as FuniColorPicker,ElConfigProvider as FuniConfigProvider,ElContainer as FuniContainer,ElAside as FuniAside,ElFooter as FuniFooter,ElHeader as FuniHeader,ElMain as FuniMain,ElDatePicker as FuniDatePicker,ElDescriptions as FuniDescriptions,ElDescriptionsItem as FuniDescriptionsItem,ElDialog as FuniDialog,ElDivider as FuniDivider,ElDrawer as FuniDrawer,ElDropdown as FuniDropdown,ElDropdownItem as FuniDropdownItem,ElDropdownMenu as FuniDropdownMenu,ElEmpty as FuniEmpty,ElForm as FuniForm,ElFormItem as FuniFormItem,ElIcon as FuniIcon,ElImage as FuniImage,ElImageViewer as FuniImageViewer,ElInput as FuniInput,ElInputNumber as FuniInputNumber,ElLink as FuniLink,ElMenu as FuniMenu,ElMenuItem as FuniMenuItem,ElMenuItemGroup as FuniMenuItemGroup,ElSubMenu as FuniSubMenu,ElPageHeader as FuniPageHeader,ElPagination as FuniPagination,ElPopconfirm as FuniPopconfirm,ElPopover as FuniPopover,ElPopper as FuniPopper,ElProgress as FuniProgress,ElRadio as FuniRadio,ElRadioButton as FuniRadioButton,ElRadioGroup as FuniRadioGroup,ElRate as FuniRate,ElResult as FuniResult,ElRow as FuniRow,ElScrollbar as FuniScrollbar,ElSelect as FuniSelect,ElOption as FuniOption,ElOptionGroup as FuniOptionGroup,ElSelectV2 as FuniSelectV2,ElSkeleton as FuniSkeleton,ElSkeletonItem as FuniSkeletonItem,ElSlider as FuniSlider,ElSpace as FuniSpace,ElStatistic as FuniStatistic,ElCountdown as FuniCountdown,ElSteps as FuniSteps,ElStep as FuniStep,ElSwitch as FuniSwitch,ElTable as FuniTable,ElTableColumn as FuniTableColumn,ElTableV2 as FuniTableV2,ElTabs as FuniTabs,ElTabPane as FuniTabPane,ElTag as FuniTag,ElText as FuniText,ElTimePicker as FuniTimePicker,ElTimeSelect as FuniTimeSelect,ElTimeline as FuniTimeline,ElTimelineItem as FuniTimelineItem,ElTooltip as FuniTooltip,ElTransfer as FuniTransfer,ElTree as FuniTree,ElTreeSelect as FuniTreeSelect,ElUpload as FuniUpload } from "element-plus";
+//局部导出
+export { FuniAffix,FuniAlert,FuniAutocomplete,FuniAutoResizer,FuniAvatar,FuniBacktop,FuniBadge,FuniBreadcrumb,FuniBreadcrumbItem,FuniButton,FuniButtonGroup,FuniCalendar,FuniCard,FuniCarousel,FuniCarouselItem,FuniCascader,FuniCascaderPanel,FuniCheckTag,FuniCheckbox,FuniCheckboxButton,FuniCheckboxGroup,FuniCol,FuniCollapse,FuniCollapseItem,FuniCollapseTransition,FuniColorPicker,FuniConfigProvider,FuniContainer,FuniAside,FuniFooter,FuniHeader,FuniMain,FuniDatePicker,FuniDescriptions,FuniDescriptionsItem,FuniDialog,FuniDivider,FuniDrawer,FuniDropdown,FuniDropdownItem,FuniDropdownMenu,FuniEmpty,FuniForm,FuniFormItem,FuniIcon,FuniImage,FuniImageViewer,FuniInput,FuniInputNumber,FuniLink,FuniMenu,FuniMenuItem,FuniMenuItemGroup,FuniSubMenu,FuniPageHeader,FuniPagination,FuniPopconfirm,FuniPopover,FuniPopper,FuniProgress,FuniRadio,FuniRadioButton,FuniRadioGroup,FuniRate,FuniResult,FuniRow,FuniScrollbar,FuniSelect,FuniOption,FuniOptionGroup,FuniSelectV2,FuniSkeleton,FuniSkeletonItem,FuniSlider,FuniSpace,FuniStatistic,FuniCountdown,FuniSteps,FuniStep,FuniSwitch,FuniTable,FuniTableColumn,FuniTableV2,FuniTabs,FuniTabPane,FuniTag,FuniText,FuniTimePicker,FuniTimeSelect,FuniTimeline,FuniTimelineItem,FuniTooltip,FuniTransfer,FuniTree,FuniTreeSelect,FuniUpload }
 
-export {
-    FuniButton
+//导出组件
+const components = [FuniAffix,FuniAlert,FuniAutocomplete,FuniAutoResizer,FuniAvatar,FuniBacktop,FuniBadge,FuniBreadcrumb,FuniBreadcrumbItem,FuniButton,FuniButtonGroup,FuniCalendar,FuniCard,FuniCarousel,FuniCarouselItem,FuniCascader,FuniCascaderPanel,FuniCheckTag,FuniCheckbox,FuniCheckboxButton,FuniCheckboxGroup,FuniCol,FuniCollapse,FuniCollapseItem,FuniCollapseTransition,FuniColorPicker,FuniConfigProvider,FuniContainer,FuniAside,FuniFooter,FuniHeader,FuniMain,FuniDatePicker,FuniDescriptions,FuniDescriptionsItem,FuniDialog,FuniDivider,FuniDrawer,FuniDropdown,FuniDropdownItem,FuniDropdownMenu,FuniEmpty,FuniForm,FuniFormItem,FuniIcon,FuniImage,FuniImageViewer,FuniInput,FuniInputNumber,FuniLink,FuniMenu,FuniMenuItem,FuniMenuItemGroup,FuniSubMenu,FuniPageHeader,FuniPagination,FuniPopconfirm,FuniPopover,FuniPopper,FuniProgress,FuniRadio,FuniRadioButton,FuniRadioGroup,FuniRate,FuniResult,FuniRow,FuniScrollbar,FuniSelect,FuniOption,FuniOptionGroup,FuniSelectV2,FuniSkeleton,FuniSkeletonItem,FuniSlider,FuniSpace,FuniStatistic,FuniCountdown,FuniSteps,FuniStep,FuniSwitch,FuniTable,FuniTableColumn,FuniTableV2,FuniTabs,FuniTabPane,FuniTag,FuniText,FuniTimePicker,FuniTimeSelect,FuniTimeline,FuniTimelineItem,FuniTooltip,FuniTransfer,FuniTree,FuniTreeSelect,FuniUpload];
+//funi自定义组件
+const FuniComponents=import.meta.glob("./**/src/index.vue")
+//全部引用
+const install = (app) => {
+    //element组件
+    components.forEach((component) => {
+        component.name=component.name.replace("El", "Funi")
+        app.component(component, component);
+    });
+    //自动注册components下的组件
+    for(var key in FuniComponents){
+      //匹配文件夹的名称作为组件名
+      let name=key.match(/\.\/(\S*)\/src/)[1]
+      app.component(name, defineAsyncComponent(FuniComponents[key]));
+    }
 }
-const components = [
-    FuniButton
-]
-const install = (Vue) => {
-    components.forEach(component => {
-        Vue.component(component.name, component)
-    })
+export default {
+  install
 }
-
-export default install

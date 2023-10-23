@@ -5,8 +5,11 @@
   "description": "",
   "main": "components/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "plop": "plop"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "element-plus": "^2.4.0"
+  }
 }

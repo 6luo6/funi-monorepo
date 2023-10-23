@@ -1,5 +1,6 @@
 import markdownItCustomAttr from 'markdown-it-custom-attrs';
 import { componentPreview, containerPreview } from '@vitepress-demo-preview/plugin';
+import component from '../route/component';
 module.exports = {
   title: 'Funi 文档',
   description: 'Funi 文档',
@@ -7,16 +8,10 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '指南', link: '/guide/installation', activeMatch: '/guide/' },
-      { text: '组件', link: '/component/button', activeMatch: '/component/' },
+      { text: '组件', link: '/component/FuniTestComponent/index', activeMatch: '/component/' },
     ],
     sidebar: {
-      '/component/': [
-        {
-          text: '基础组件',
-          collapsed: false,
-          items: [{ text: 'Button 按钮', link: '/component/button' }],
-        },
-      ],
+      '/component/': component,
     },
   },
   head: [

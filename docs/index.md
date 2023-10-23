@@ -13,7 +13,7 @@ hero:
       link: /guide/installation
     - theme: brand
       text: 组件
-      link: /component/button
+      link: /component/FuniTestComponent/index
 
 features:
   - icon: 🛠️
